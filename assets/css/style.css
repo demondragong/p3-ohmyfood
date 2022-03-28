@@ -1,0 +1,36 @@
+body {
+  box-sizing: border-box;
+  font-family: "Roboto", Verdana, sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+.header-font {
+  font-family: "Shrikhand", cursive;
+}
+
+.logo {
+  width: 50%;
+  margin: auto;
+}
+
+.city-selector {
+  background-color: #EAEAEA;
+}
+
+.presentation {
+  background-color: #F6F6F6;
+}
+
+.resaurants {
+  background-color: #F6F6F6;
+}
+
+.footer {
+  background-color: #353535;
+  color: #EAEAEA;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,43 @@
+// Variables
+$colour-primary: #9356DC;
+$colour-secondary: #FF79DA;
+$colour-tertiary: #99E2D0;
+$colour-footer: #353535;
+$colour-section-background: #F6F6F6;
+$colour-city-selector: #EAEAEA;
+
+
+$headers-font-fam: 'Shrikhand', cursive;
+$body-font-fam: 'Roboto', Verdana, sans-serif;
+
+
+
+// General rules
+
+body {
+    box-sizing: border-box;
+    font-family: $body-font-fam;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+.header-font {
+    font-family: $headers-font-fam;
+}
+.logo {
+    width: 50%;
+    margin: auto;
+}
+.city-selector {
+    background-color: $colour-city-selector;
+}
+.presentation {
+    background-color: $colour-section-background;
+}
+.resaurants {
+    background-color: $colour-section-background;
+}
+.footer {
+    background-color: $colour-footer;
+    color: #EAEAEA;
+}

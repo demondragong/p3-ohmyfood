@@ -1,0 +1,19 @@
+{
+  "name": "p3-ohmyfood",
+  "version": "1.0.0",
+  "description": "Ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./scss/style.scss:./assets/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/demondragong/demondragong.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/demondragong/demondragong.github.io/issues"
+  },
+  "homepage": "https://github.com/demondragong/demondragong.github.io#readme"
+}
