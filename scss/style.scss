@@ -9,7 +9,10 @@ $colour-city-selector: #EAEAEA;
 
 $headers-font-fam: 'Shrikhand', cursive;
 $body-font-fam: 'Roboto', Verdana, sans-serif;
-
+$light: 200;
+$normal: 400;
+$semibold: 600;
+$bold: 700;
 
 
 // General rules
@@ -17,27 +20,109 @@ $body-font-fam: 'Roboto', Verdana, sans-serif;
 body {
     box-sizing: border-box;
     font-family: $body-font-fam;
+    font-weight: $light;
 }
 *, *::before, *::after {
     box-sizing: inherit;
 }
+body > * {
+    padding: 1.5rem 1.5rem;
+}
+h1 {
+    font-family: $headers-font-fam;
+    font-size: 2rem;
+    margin: 0;
+}
+h2 {
+    font-weight: $semibold;
+    font-size: 1.5rem;
+}
+h3 {
+    font-weight: $semibold;
+    font-size: 1.1rem;
+    margin: 0;
+}
+// reset list styles
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+// reset link styles
+a {
+    text-decoration: none;
+    color: #000;
+}
 .header-font {
     font-family: $headers-font-fam;
 }
-.logo {
-    width: 50%;
-    margin: auto;
+
+
+
+
+.header {
+    text-align: center;
+    padding: .5rem;
 }
 .city-selector {
     background-color: $colour-city-selector;
+    text-align: center;
+    padding: .5rem;
 }
 .presentation {
     background-color: $colour-section-background;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: $light;
 }
-.resaurants {
+.steps-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.step {
+    display: flex;
+    padding: 1.5rem;
     background-color: $colour-section-background;
+    border-radius: 20px;
+    box-shadow: 0px 4px 12px 2px rgb(0 0 0 / 5%);
+}
+.restaurants {
+    background-color: $colour-section-background;
+}
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 4px 12px 2px rgb(0 0 0 / 5%);
+    transition: 0.3s;
+    max-width: 100%;
+    &__image {
+        padding: 0px;
+        height: 24vh;
+        object-fit: cover;
+        border-radius: 20px 20px 0 0;
+        flex: auto;
+    }
+    &__body {
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        i {
+            font-size: 1.5rem;
+        }
+    }
 }
 .footer {
     background-color: $colour-footer;
     color: #EAEAEA;
+    a {
+        color: #EAEAEA;
+    }
 }

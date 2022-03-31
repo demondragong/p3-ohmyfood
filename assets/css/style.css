@@ -1,35 +1,121 @@
 body {
   box-sizing: border-box;
   font-family: "Roboto", Verdana, sans-serif;
+  font-weight: 200;
 }
 
 *, *::before, *::after {
   box-sizing: inherit;
 }
 
+body > * {
+  padding: 1.5rem 1.5rem;
+}
+
+h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 2rem;
+  margin: 0;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
 .header-font {
   font-family: "Shrikhand", cursive;
 }
 
-.logo {
-  width: 50%;
-  margin: auto;
+.header {
+  text-align: center;
+  padding: 0.5rem;
 }
 
 .city-selector {
   background-color: #EAEAEA;
+  text-align: center;
+  padding: 0.5rem;
 }
 
 .presentation {
   background-color: #F6F6F6;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 200;
 }
 
-.resaurants {
+.steps-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.step {
+  display: flex;
+  padding: 1.5rem;
   background-color: #F6F6F6;
+  border-radius: 20px;
+  box-shadow: 0px 4px 12px 2px rgba(0, 0, 0, 0.05);
+}
+
+.restaurants {
+  background-color: #F6F6F6;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0px 4px 12px 2px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+  max-width: 100%;
+}
+.card__image {
+  padding: 0px;
+  height: 24vh;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+  flex: auto;
+}
+.card__body {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card__body i {
+  font-size: 1.5rem;
 }
 
 .footer {
   background-color: #353535;
+  color: #EAEAEA;
+}
+.footer a {
   color: #EAEAEA;
 }
 

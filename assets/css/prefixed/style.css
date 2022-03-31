@@ -1,0 +1,38 @@
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Roboto", Verdana, sans-serif;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+.header-font {
+  font-family: "Shrikhand", cursive;
+}
+
+.logo {
+  width: 50%;
+  margin: auto;
+}
+
+.city-selector {
+  background-color: #EAEAEA;
+}
+
+.presentation {
+  background-color: #F6F6F6;
+}
+
+.resaurants {
+  background-color: #F6F6F6;
+}
+
+.footer {
+  background-color: #353535;
+  color: #EAEAEA;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3Njc3Mvc3R5bGUuc2NzcyIsIi4uL3N0eWxlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFnQkE7RUFDSSw4QkFBQTtVQUFBLHNCQUFBO0VBQ0EsMENBUlk7QUNQaEI7O0FEaUJBO0VBQ0ksMkJBQUE7VUFBQSxtQkFBQTtBQ2RKOztBRGdCQTtFQUNJLGlDQWZlO0FDRW5COztBRGVBO0VBQ0ksVUFBQTtFQUNBLFlBQUE7QUNaSjs7QURjQTtFQUNJLHlCQXpCbUI7QUNjdkI7O0FEYUE7RUFDSSx5QkE3QndCO0FDbUI1Qjs7QURZQTtFQUNJLHlCQWhDd0I7QUN1QjVCOztBRFdBO0VBQ0kseUJBcENZO0VBcUNaLGNBQUE7QUNSSiIsImZpbGUiOiJzdHlsZS5jc3MifQ== */
