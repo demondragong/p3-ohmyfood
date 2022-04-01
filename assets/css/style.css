@@ -10,10 +10,6 @@ body {
   box-sizing: inherit;
 }
 
-body > * {
-  padding: 1.5rem 1.5rem;
-}
-
 h1 {
   font-family: "Shrikhand", cursive;
   font-size: 2rem;
@@ -23,6 +19,7 @@ h1 {
 h2 {
   font-weight: 600;
   font-size: 1.5rem;
+  margin-top: 0;
 }
 
 h3 {
@@ -53,10 +50,11 @@ a {
 
 .header {
   text-align: center;
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
 .footer {
+  padding: 1.5rem;
   background-color: #353535;
   color: #EAEAEA;
 }
@@ -84,7 +82,7 @@ a {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  padding: 0.5rem;
+  padding: 0.8rem;
 }
 .city-selector input {
   border: none;
@@ -95,10 +93,15 @@ a {
 }
 
 .presentation {
+  padding: 3rem 1.5rem;
   background-color: #F6F6F6;
   text-align: center;
   font-size: 1.1rem;
   font-weight: 200;
+}
+
+.explanation {
+  padding: 3rem 1.5rem;
 }
 
 .steps-container {
@@ -132,6 +135,7 @@ a {
 }
 
 .restaurants {
+  padding: 3rem 1.5rem;
   background-color: #F6F6F6;
 }
 
@@ -165,6 +169,31 @@ a {
 }
 .card__body i {
   font-size: 1.5rem;
+}
+
+main {
+  background: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+  background-size: contain;
+  padding-top: 12rem;
+}
+
+.menu-image {
+  width: 100%;
+}
+
+.menu {
+  margin-top: 2rem;
+  background-color: #F6F6F6;
+  border-radius: 20px 20px 0 0;
+  padding: 2rem 1.5rem;
+}
+.menu__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.menu__header i {
+  font-size: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */
