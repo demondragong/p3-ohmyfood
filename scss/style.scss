@@ -1,4 +1,4 @@
-// Variables
+// || utils
 $colour-primary: #9356DC;
 $colour-secondary: #FF79DA;
 $colour-tertiary: #99E2D0;
@@ -6,21 +6,33 @@ $colour-footer: #353535;
 $colour-section-background: #F6F6F6;
 $colour-city-selector: #EAEAEA;
 
-
 $headers-font-fam: 'Shrikhand', cursive;
 $body-font-fam: 'Roboto', Verdana, sans-serif;
+
 $light: 200;
 $normal: 400;
 $semibold: 600;
 $bold: 700;
 
+$breakpoints: (
+    mobile: 599px
+);
 
-// General rules
+@mixin mobile-only {
+    @media screen and (max-width: map-get($breakpoints, mobile)){
+    @content;
+    }
+}
+
+
+// || base
 
 body {
     box-sizing: border-box;
     font-family: $body-font-fam;
     font-weight: $light;
+    max-width: 600px;
+    margin: auto;
 }
 *, *::before, *::after {
     box-sizing: inherit;
@@ -46,6 +58,12 @@ h3 {
 ul {
     list-style-type: none;
     padding: 0;
+    li {
+        margin-bottom: .5rem;
+    }
+    i {
+        margin-right: .5rem;
+    }
 }
 // reset link styles
 a {
@@ -57,16 +75,51 @@ a {
 }
 
 
-
+// || layouts & components
 
 .header {
     text-align: center;
     padding: .5rem;
 }
+.footer {
+    background-color: $colour-footer;
+    color: #EAEAEA;
+    a {
+        color: #EAEAEA;
+    }
+}
+.button {
+    background-image: linear-gradient($colour-secondary, $colour-primary);
+    color: $colour-section-background;
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: 10rem;
+    border: 0;
+    box-shadow: 0px 4px 12px 2px rgb(0 0 0 / 20%);
+    transition: all 400ms;
+    &:hover{
+        background: $colour-primary;
+        box-shadow: 0px 4px 12px 2px rgb(0 0 0 / 60%);
+    }
+}
+
+
+
+// || page: home
+
 .city-selector {
     background-color: $colour-city-selector;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
     padding: .5rem;
+    input {
+        border:none;
+        width:130px;
+        &#ville[type="text"][disabled] {
+            color: red;
+         }
+    }
 }
 .presentation {
     background-color: $colour-section-background;
@@ -80,11 +133,27 @@ a {
     gap: 1.5rem;
 }
 .step {
+    padding-block: 1.5rem;
     display: flex;
-    padding: 1.5rem;
+    align-items: center;
+    gap: 1.5rem;
     background-color: $colour-section-background;
     border-radius: 20px;
-    box-shadow: 0px 4px 12px 2px rgb(0 0 0 / 5%);
+    box-shadow: 0px 4px 12px 2px rgb(0 0 0 / 15%);
+    &__number {
+        background-color: $colour-primary;
+        color: white;
+        width: 1.6rem;
+        height: 1.6rem;
+        border-radius: 50%;
+        padding-top: .3rem;
+        text-align: center;
+        margin-left: -.8rem;
+    }
+    i {
+        font-size: 1.3rem;
+        color: grey;
+    }
 }
 .restaurants {
     background-color: $colour-section-background;
@@ -119,10 +188,6 @@ a {
         }
     }
 }
-.footer {
-    background-color: $colour-footer;
-    color: #EAEAEA;
-    a {
-        color: #EAEAEA;
-    }
-}
+
+
+// || page: menu
