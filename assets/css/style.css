@@ -96,6 +96,64 @@ a {
   z-index: -1;
 }
 
+.spinner-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: disappear 0ms 3000ms both;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  animation: loading 2s linear 2;
+}
+
+.bubble-1,
+.bubble-2 {
+  position: absolute;
+  top: 0;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  background-color: #9356DC;
+  animation: bounce 2s ease-in-out 2;
+}
+
+.bubble-2 {
+  top: auto;
+  bottom: 0;
+  background-color: #99E2D0;
+  animation-delay: -1s;
+}
+
+@keyframes loading {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+@keyframes disappear {
+  100% {
+    opacity: 0;
+    z-index: -3;
+  }
+}
 .city-selector {
   background-color: #EAEAEA;
   display: flex;
