@@ -10,20 +10,25 @@ body {
   box-sizing: inherit;
 }
 
-h1 {
+.logo {
   font-family: "Shrikhand", cursive;
   font-size: 2rem;
+}
+
+h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.8rem;
   margin: 0;
 }
 
 h2 {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.5rem;
   margin-top: 0;
 }
 
 h3 {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.1rem;
   margin: 0;
 }
@@ -63,18 +68,32 @@ a {
 }
 
 .button {
-  background-image: linear-gradient(#FF79DA, #9356DC);
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(170deg, #FF79DA, #9356DC);
   color: #F6F6F6;
   cursor: pointer;
   padding: 1rem;
   border-radius: 10rem;
   border: 0;
   box-shadow: 0px 4px 12px 2px rgba(0, 0, 0, 0.2);
-  transition: all 400ms;
 }
-.button:hover {
-  background: #9356DC;
-  box-shadow: 0px 4px 12px 2px rgba(0, 0, 0, 0.6);
+.button:hover::after {
+  opacity: 1;
+}
+.button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 10rem;
+  transition: opacity 250ms;
+  background: linear-gradient(170deg, #ff88de, #9b63df);
+  box-shadow: 0px 4px 12px 2px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  z-index: -1;
 }
 
 .city-selector {
@@ -169,6 +188,16 @@ a {
 }
 .card__body i {
   font-size: 1.5rem;
+  color: white;
+  text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+}
+.card__body i:hover {
+  text-shadow: none;
+  background: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: color 1000ms;
 }
 
 main {
@@ -182,18 +211,60 @@ main {
 }
 
 .menu {
-  margin-top: 2rem;
+  margin-top: 0.5rem;
   background-color: #F6F6F6;
-  border-radius: 20px 20px 0 0;
-  padding: 2rem 1.5rem;
+  border-radius: 40px 40px 0 0;
+  padding: 2rem 0rem;
 }
 .menu__header {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  margin: 0rem 1.5rem 2rem 1.5rem;
 }
 .menu__header i {
-  font-size: 2rem;
+  font-size: 1.7rem;
+}
+
+.menu-section-title {
+  margin-inline: 1.5rem;
+  font-size: 1rem;
+  font-weight: 200;
+  position: relative;
+}
+.menu-section-title::before {
+  position: absolute;
+  left: 0;
+  top: 1.3rem;
+  height: 0;
+  width: 40px;
+  content: "";
+  border-top: 3px solid #99E2D0;
+}
+
+.menu-item {
+  width: 93%;
+  margin: auto;
+  background-color: white;
+  border-radius: 20px;
+  padding: 1rem;
+  margin-block: 1rem;
+  box-shadow: 0px 4px 12px 2px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.menu-item__heading {
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+.menu-item__subheading {
+  font-size: 0.9rem;
+  font-weight: 200;
+}
+.menu-item__price {
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=style.css.map */
