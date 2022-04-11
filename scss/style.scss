@@ -328,16 +328,39 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    &__text {
+        max-width: 66%;
+    }
     &__heading {
         font-weight: $semibold;
-        font-size: 1.1rem;
+        font-size: 1.25rem;
         margin-bottom:0.5rem;
 }
     &__subheading {
-        font-size: .9rem;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        font-size: 1rem;
         font-weight: $light;
     }
     &__price {
         font-weight: $semibold;
+    }
+    &__check {
+        align-self: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $colour-tertiary;
+        padding: 1.5rem;
+        margin: -1rem -1rem -1rem 0;
+        border-radius: 0 20px 20px 0; 
+        color: $colour-tertiary;
+        i {
+           background-color: white;
+           padding: 0.4rem;
+           border-radius: 50%;
+           font-size: 1.3rem; 
+        }
     }
 }

@@ -312,17 +312,40 @@ main {
   justify-content: space-between;
   align-items: flex-end;
 }
+.menu-item__text {
+  max-width: 66%;
+}
 .menu-item__heading {
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   margin-bottom: 0.5rem;
 }
 .menu-item__subheading {
-  font-size: 0.9rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 1rem;
   font-weight: 200;
 }
 .menu-item__price {
   font-weight: 500;
+}
+.menu-item__check {
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  padding: 1.5rem;
+  margin: -1rem -1rem -1rem 0;
+  border-radius: 0 20px 20px 0;
+  color: #99E2D0;
+}
+.menu-item__check i {
+  background-color: white;
+  padding: 0.4rem;
+  border-radius: 50%;
+  font-size: 1.3rem;
 }
 
 /*# sourceMappingURL=style.css.map */
