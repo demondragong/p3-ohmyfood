@@ -317,50 +317,96 @@ main {
         border-top: 3px solid $colour-tertiary;
     }
 }
+
+
+@keyframes items {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .menu-item {
+    animation: items 1000ms;
+    animation-fill-mode: backwards;
+    @for $i from 1 through 10 {
+        &:nth-child(#{$i}n) {
+            animation-delay: #{$i * 40}ms;
+        }
+    }
     width: 93%;
     margin:auto;
     background-color: white;
     border-radius: 20px;
-    padding: 1rem;
     margin-block: 1rem;
     box-shadow: 0px 4px 12px 2px rgb(0 0 0 / 5%);
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    overflow:hidden;
     &__text {
-        max-width: 66%;
+        flex-grow: 1;
+        width: 50%;
+        margin: 1rem 0 1rem 1rem;
     }
     &__heading {
         font-weight: $semibold;
-        font-size: 1.25rem;
+        font-size: 1.1rem;
         margin-bottom:0.5rem;
 }
     &__subheading {
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
-        font-size: 1rem;
+        font-size: .9rem;
         font-weight: $light;
     }
     &__price {
         font-weight: $semibold;
+        margin: 1rem;
+        width: 15%;
+        // transform: translateX(0);
+        // transition: transform 400ms;
     }
     &__check {
+        width: 0;
+        overflow: hidden;
+        
+        // TEST
+        // transform: translateX(100%);
+        // transition: transform 400ms;
+
+        transition: width 400ms;
+        
         align-self: center;
         display: flex;
         justify-content: center;
         align-items: center;
         background-color: $colour-tertiary;
-        padding: 1.5rem;
-        margin: -1rem -1rem -1rem 0;
         border-radius: 0 20px 20px 0; 
         color: $colour-tertiary;
         i {
            background-color: white;
            padding: 0.4rem;
            border-radius: 50%;
-           font-size: 1.3rem; 
+           font-size: 1.3rem;
+           margin: 1.4rem; 
+           transition: transform 400ms;
         }
     }
+    &:hover &__check {
+        width: 20%;
+        // transform: translateX(0);
+        i {
+            transform: rotate(360deg);
+        }
+    }
+    // TEST
+    // &:hover &__price {
+    //     transform: translateX(50px);
+    // }
 }

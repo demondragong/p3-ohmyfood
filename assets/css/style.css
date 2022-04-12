@@ -300,44 +300,91 @@ main {
   border-top: 3px solid #99E2D0;
 }
 
+@keyframes items {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .menu-item {
+  animation: items 1000ms;
+  animation-fill-mode: backwards;
   width: 93%;
   margin: auto;
   background-color: white;
   border-radius: 20px;
-  padding: 1rem;
   margin-block: 1rem;
   box-shadow: 0px 4px 12px 2px rgba(0, 0, 0, 0.05);
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  overflow: hidden;
+}
+.menu-item:nth-child(1n) {
+  animation-delay: 40ms;
+}
+.menu-item:nth-child(2n) {
+  animation-delay: 80ms;
+}
+.menu-item:nth-child(3n) {
+  animation-delay: 120ms;
+}
+.menu-item:nth-child(4n) {
+  animation-delay: 160ms;
+}
+.menu-item:nth-child(5n) {
+  animation-delay: 200ms;
+}
+.menu-item:nth-child(6n) {
+  animation-delay: 240ms;
+}
+.menu-item:nth-child(7n) {
+  animation-delay: 280ms;
+}
+.menu-item:nth-child(8n) {
+  animation-delay: 320ms;
+}
+.menu-item:nth-child(9n) {
+  animation-delay: 360ms;
+}
+.menu-item:nth-child(10n) {
+  animation-delay: 400ms;
 }
 .menu-item__text {
-  max-width: 66%;
+  flex-grow: 1;
+  width: 50%;
+  margin: 1rem 0 1rem 1rem;
 }
 .menu-item__heading {
   font-weight: 500;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   margin-bottom: 0.5rem;
 }
 .menu-item__subheading {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 200;
 }
 .menu-item__price {
   font-weight: 500;
+  margin: 1rem;
+  width: 15%;
 }
 .menu-item__check {
+  width: 0;
+  overflow: hidden;
+  transition: width 400ms;
   align-self: center;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #99E2D0;
-  padding: 1.5rem;
-  margin: -1rem -1rem -1rem 0;
   border-radius: 0 20px 20px 0;
   color: #99E2D0;
 }
@@ -346,6 +393,14 @@ main {
   padding: 0.4rem;
   border-radius: 50%;
   font-size: 1.3rem;
+  margin: 1.4rem;
+  transition: transform 400ms;
+}
+.menu-item:hover .menu-item__check {
+  width: 20%;
+}
+.menu-item:hover .menu-item__check i {
+  transform: rotate(360deg);
 }
 
 /*# sourceMappingURL=style.css.map */
