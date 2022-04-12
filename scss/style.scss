@@ -65,6 +65,7 @@ ul {
     }
     i {
         margin-right: .5rem;
+        font-size: 0.9rem;
     }
 }
 // reset link styles
@@ -82,6 +83,7 @@ a {
 .header {
     text-align: center;
     padding: 1rem;
+    position:relative;
 }
 .footer {
     padding: 1.5rem;
@@ -92,6 +94,8 @@ a {
     }
 }
 .button {
+    display: block;
+    margin: auto;
     position: relative;
     z-index: 1;
     background: linear-gradient(170deg, $colour-secondary, $colour-primary);
@@ -119,6 +123,19 @@ a {
         box-shadow: 0px 4px 12px 2px rgb(0 0 0 / 40%);
         opacity: 0;
         z-index: -1;
+    }
+}
+.fa-heart {
+    font-size: 1.5rem;
+    color: white;
+    text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black; 
+    &:hover{
+        text-shadow:none;
+        background: linear-gradient($colour-primary, $colour-secondary);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color:transparent;
+        transition: color 1000ms;
     }
 }
 .spinner-container {
@@ -242,15 +259,27 @@ a {
 }
 .card {
     display: flex;
+    position: relative;
     flex-direction: column;
     background-color: white;
     border-radius: 20px;
     box-shadow: 0px 4px 12px 2px rgb(0 0 0 / 5%);
     transition: 0.3s;
     max-width: 100%;
+    &__new-sticker {
+        position: absolute;
+        top: 1.2rem;
+        right: 1.2rem;
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
+        border-radius: 3px;
+        background: $colour-tertiary;
+        color: darken($colour-tertiary, 40%);
+    }
     &__image {
         padding: 0px;
-        height: 24vh;
+        height: 21vh;
+        object-position: bottom;
         object-fit: cover;
         border-radius: 20px 20px 0 0;
         flex: auto;
@@ -260,24 +289,18 @@ a {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        i {
-            font-size: 1.5rem;
-            color: white;
-            text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black; 
-            &:hover{
-                text-shadow:none;
-                background: linear-gradient($colour-primary, $colour-secondary);
-                background-clip: text;
-                -webkit-background-clip: text;
-                color:transparent;
-                transition: color 1000ms;
-            }
-        }
     }
 }
 
 
 // || page: menu
+
+.home-button {
+    position: absolute;
+    left: 2rem;
+    font-size: 1.7rem;
+    top: 1.3rem;
+}
 
 main {
     background: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
@@ -299,7 +322,12 @@ main {
         margin: 0rem 1.5rem 2rem 1.5rem;
         i {
             font-size: 1.7rem;
+            color: $colour-section-background;
         }
+    }
+    .button {
+        width: 11rem;
+        margin-block: 3rem;
     }
 }
 .menu-section-title {
@@ -333,7 +361,7 @@ main {
 .menu-item {
     animation: items 1000ms;
     animation-fill-mode: backwards;
-    @for $i from 1 through 10 {
+    @for $i from 1 through 15 {
         &:nth-child(#{$i}n) {
             animation-delay: #{$i * 40}ms;
         }
@@ -354,10 +382,13 @@ main {
         margin: 1rem 0 1rem 1rem;
     }
     &__heading {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
         font-weight: $semibold;
         font-size: 1.1rem;
         margin-bottom:0.5rem;
-}
+    }
     &__subheading {
         overflow: hidden;
         white-space: nowrap;
