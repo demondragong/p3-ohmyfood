@@ -278,7 +278,7 @@ a {
     }
     &__image {
         padding: 0px;
-        height: 21vh;
+        height: 11rem;
         object-position: bottom;
         object-fit: cover;
         border-radius: 20px 20px 0 0;
@@ -301,17 +301,15 @@ a {
     font-size: 1.7rem;
     top: 1.3rem;
 }
-
-main {
-    background: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
-    background-size: contain;
-    padding-top: 12rem;
-}
 .menu-image {
     width: 100%;
+    height: 17rem;
+    object-fit: cover;
+    image-rendering: -webkit-optimize-contrast;
 }
 .menu {
-    margin-top: .5rem;
+    position: relative;
+    margin-top: -3.5rem;
     background-color: $colour-section-background;
     border-radius: 40px 40px 0 0;
     padding: 2rem 0rem;
@@ -321,7 +319,6 @@ main {
         align-items: baseline;
         margin: 0rem 1.5rem 2rem 1.5rem;
         i {
-            font-size: 1.7rem;
             color: $colour-section-background;
         }
     }
@@ -331,7 +328,7 @@ main {
     }
 }
 .menu-section-title {
-    margin-inline: 1.5rem;
+    margin: 2.5rem 0 1rem 1.5rem;
     font-size: 1rem;
     font-weight: $light;
     position: relative;
