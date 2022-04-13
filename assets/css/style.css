@@ -2,7 +2,6 @@ body {
   box-sizing: border-box;
   font-family: "Roboto", Verdana, sans-serif;
   font-weight: 200;
-  max-width: 600px;
   margin: auto;
 }
 
@@ -182,9 +181,12 @@ a {
 .city-selector input {
   border: none;
   width: 130px;
+  background: #EAEAEA;
 }
 .city-selector input#ville[type=text][disabled] {
-  color: red;
+  color: black;
+  -webkit-text-fill-color: black;
+  opacity: 1;
 }
 
 .presentation {
@@ -197,6 +199,8 @@ a {
 
 .explanation {
   padding: 3rem 1.5rem;
+  max-width: 450px;
+  margin-inline: auto;
 }
 
 .steps-container {
@@ -232,6 +236,11 @@ a {
 .restaurants {
   padding: 3rem 1.5rem;
   background-color: #F6F6F6;
+}
+
+.restaurants > * {
+  max-width: 450px;
+  margin-inline: auto;
 }
 
 .cards-container {
@@ -283,10 +292,18 @@ a {
 }
 
 .menu-image {
+  display: block;
   width: 100%;
+  max-width: 600px;
+  margin: auto;
   height: 17rem;
   object-fit: cover;
   image-rendering: -webkit-optimize-contrast;
+}
+@media (min-width: 600px) {
+  .menu-image {
+    border-radius: 20px;
+  }
 }
 
 .menu {
@@ -310,6 +327,13 @@ a {
   margin-block: 3rem;
 }
 
+@media (min-width: 600px) {
+  .menu > * {
+    max-width: 558px;
+    margin-inline: auto;
+  }
+}
+
 .menu-section-title {
   margin: 2.5rem 0 1rem 1.5rem;
   font-size: 1rem;
@@ -324,6 +348,12 @@ a {
   width: 40px;
   content: "";
   border-top: 3px solid #99E2D0;
+}
+@media (min-width: 600px) {
+  .menu-section-title {
+    max-width: 558px;
+    margin-inline: auto;
+  }
 }
 
 @keyframes items {
